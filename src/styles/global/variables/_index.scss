@@ -1,0 +1,10 @@
+@use './colors' as *;
+@use 'sass:list';
+
+:root {
+    // ------------------------------------------------------ | Color variables
+  
+    @each $color in $palette {
+      #{nth($color, 1)}: #{list.nth($color, 2)};
+    }
+}
