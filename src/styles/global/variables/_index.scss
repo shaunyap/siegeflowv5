@@ -1,5 +1,6 @@
-@use './colors' as *;
 @use 'sass:list';
+@use './colors' as *;
+@use './media' as *;
 
 :root {
     // ------------------------------------------------------ | Color variables

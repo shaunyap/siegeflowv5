@@ -1,4 +1,5 @@
 @use './variables';
+@use './variables/media' as *;
 
 html,
 body {
@@ -6,17 +7,31 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: var(--color-mid-grey);
+    display: flex;
+    justify-content: center;
+}
+
+main {
+  background-color: var(--color-light-grey);
+  max-width: $max-width;
+
+  @media screen and (min-width: 1280px) {
+    min-width: 1280px;
+  } 
+
+  article {
+    max-width: $article-width;
+    padding: 4rem 2rem;
+
+  }
 }
 
 a {
   color: var(--color-primary);
   text-decoration: none;
-}
 
-* {
-  box-sizing: border-box;
-}
-
-h1 {
-  font-size: 8em;
+  &:hover {
+    text-decoration: underline;
+  }
 }
