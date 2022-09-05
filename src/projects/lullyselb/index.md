@@ -13,7 +13,7 @@ tags: [node.js, axios, shopify, mailchimp]
 
 Lully Selb is an independent designer label that creates unique designs for the modern Muslim woman. With the growth in their subscription offering, they comissioned me to migrate their manual system to a subscription plugin on Shopify. Seemed simple enough. 
 
-Given the need for a customizable monthly subscription box, Bold Recurring Orders was the clear winner in terms of functionality. However, there was an unforeseen hiccup. The best way to differentiate subscribers from regular customers was through the sue of tags, which was how Bold implemented their system.
+Given the need for a customizable monthly subscription box, Bold Recurring Orders was the clear winner in terms of functionality. However, there was an unforeseen hiccup. The best way to differentiate subscribers from regular customers was through the use of tags, which was how Bold implemented their system.
 
 ### There was, however, the small issue of Mailchimp’s official plugin for Shopify not supporting the import of tags.
 

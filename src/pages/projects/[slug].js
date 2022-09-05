@@ -3,10 +3,10 @@ import fs from 'fs'
 import MarkdownIt from 'markdown-it'
 import matter from 'gray-matter'
 
-import styles from './Blog.module.scss'
+import styles from './Projects.module.scss'
 import { getAllPostSlugs } from '../../lib/posts';
 
-const dirPath = path.resolve('./src/posts/')
+const dirPath = path.resolve('./src/projects/')
 
 export async function getStaticPaths() {
     const paths = getAllPostSlugs(dirPath);
@@ -19,7 +19,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
     const md = new MarkdownIt();
 
-    const fileContents = fs.readFileSync(path.resolve(`./src/posts/${context.params.slug}`,'./index.md'), 'utf8')
+    const fileContents = fs.readFileSync(path.resolve(`./src/projects/${context.params.slug}`,'./index.md'), 'utf8')
     const { data, content } = matter(fileContents)
 
     const frontMatter = data;
