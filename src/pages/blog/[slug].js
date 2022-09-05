@@ -1,8 +1,9 @@
 const path = require('path')
-// import parseMD from 'parse-md'
 import fs from 'fs'
 import MarkdownIt from 'markdown-it'
 import matter from 'gray-matter'
+
+import styles from './Blog.module.scss'
 import { getAllPostSlugs } from '../../lib/blog';
 
 const dirPath = path.resolve('./src/posts/')
@@ -32,12 +33,14 @@ export async function getStaticProps(context) {
 
 const BlogPost = ({frontMatter, renderedContent}) => {
 return (
-    <div>
+    <main className={styles.main}>
+      <article className={styles.blog_post}>
         <h1>{frontMatter.title}</h1>
         <div
           dangerouslySetInnerHTML={{__html: renderedContent}}
         />
-    </div>
+      </article>
+    </main>
 )
 }
 
