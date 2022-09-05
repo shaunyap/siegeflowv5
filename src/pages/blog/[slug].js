@@ -1,38 +1,28 @@
 import fs from 'fs'
 const path = require('path')
-// import parseMD from 'parse-md'
 import MarkdownIt from 'markdown-it'
 import matter from 'gray-matter'
+import { getAllPostSlugs } from '../../lib/blog';
 
 const dirPath = path.resolve('./src/posts/')
-const tempslug="test"
 
 export async function getStaticPaths() {
-  // TODO: Figure out how to generate a list of paths from the folders in /posts
-      fs.readdir(dirPath, function (err, filesPath) {
-      if (err) throw err;
-        // return { params: { slug: file } };
-        console.log(filesPath);
-      })
+    const paths = getAllPostSlugs(dirPath);
     return {
-        paths: [
-            { params: { slug: tempslug } }
-        ],
-        fallback: true // false or 'blocking'
+      paths,
+      fallback: false,
     };
-}
+  }
 
 export async function getStaticProps(context) {
     const md = new MarkdownIt();
 
-    const fileContents = fs.readFileSync(path.resolve(`./src/posts/${tempslug}`,'./index.md'), 'utf8')
+    const fileContents = fs.readFileSync(path.resolve(`./src/posts/${context.params.slug}`,'./index.md'), 'utf8')
     const { data, content } = matter(fileContents)
 
     const frontMatter = data;
     
     // TODO: Figure out how/where to host images
-    console.log(frontMatter.title)
-
     return {
       props: {frontMatter, content}
     }
