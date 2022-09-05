@@ -50,3 +50,14 @@ a {
     text-decoration: underline;
   }
 }
+
+pre {
+  background-color: var(--color-off-black);
+  padding: 1rem 1.5rem;
+
+  code {
+    color: var(--color-orange);
+    line-height: 1.2em;
+
+  }
+}

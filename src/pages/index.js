@@ -2,8 +2,49 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Home.module.scss'
+import fs from 'fs'
+const path = require('path')
+import matter from 'gray-matter'
 
-export default function Home() {
+
+export async function getStaticProps() {
+  const getPostsForIndex = (directory, numberOfPosts) => {
+    
+    const fileMeta = (fileName) => {
+      const fileContents = fs.readFileSync(path.resolve(`./src/${directory}/${fileName}`,'./index.md'), 'utf8')
+      const { data } = matter(fileContents)
+      const {title, date} = data
+
+      return {
+        path: `/${directory}/${fileName}`,
+        title,
+        date
+      }
+    }
+
+    const posts = []
+    const fileNames = fs.readdirSync(`./src/${directory}`);
+    fileNames.map(fileName => {
+      posts.push(fileMeta(fileName))
+    })
+
+    posts.sort((a,b) => a.date - b.date);
+    return posts.slice(0, numberOfPosts)
+  }
+
+  const projects = await getPostsForIndex('projects');
+  const blogPosts = await getPostsForIndex('posts');
+
+  return {
+    props: {
+      projects,
+      blogPosts
+    }
+  }
+}
+
+
+export default function Home(props) {
   return (
     <div className="wrapper">
       <Head>
@@ -44,13 +85,18 @@ export default function Home() {
           <div>
           <h2>Selected Past Work</h2>
           <ul>
-            <li>Amperity.com Rearchitecture</li>
-            <li>Persisting UTM parameters as cookies</li>
-            <li>Chef Downloads site</li>
+            {props.projects.map(post => (
+              <li key={post.path}>{post.title}</li>
+            )) }
           </ul>
           </div>
           <div>
           <h2>Blog posts</h2>
+          <ul>
+            {props.blogPosts.map(post => (
+              <li key={post.path}>{post.title}</li>
+            )) }
+          </ul>
           </div>
         </section>
 
