@@ -8,7 +8,7 @@ thumbnail: "./thumbnail.png"
 tags: [Next.js, Contentful, Jamstack, React.js]
 
 ---
-![Screenshot of Amperity.com Home Page](./header.png)
+![Screenshot of Amperity.com Home Page](https://www.siegeflow.com/static/21e38cd9b57468e37c41e606d9e447b2/ac99c/header.jpg)
 [Live Site](https://amperity.com)
 
 ## The goal: switch front-end platforms from the PHP based craft, to something that's faster, more maintainable and scalable.
