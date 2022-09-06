@@ -6,6 +6,7 @@ const path = require('path')
 import matter from 'gray-matter'
 
 import styles from './Home.module.scss'
+import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 
 
@@ -58,6 +59,7 @@ export default function Home(props) {
         </style>
       </Head>
 
+      <Nav />
       <main className={styles.main}>
         <section>
           <article className={styles.article}>
@@ -85,7 +87,7 @@ export default function Home(props) {
         </section>
         <section className={styles.half}>
           <div>
-          <h2>Selected Past Work</h2>
+          <h2>Selected past work</h2>
           <ul className="post_index">
             {props.projects.map(post => (
               <Link href={post.path} key={post.path}><a><li>{post.title}</li></a></Link>
