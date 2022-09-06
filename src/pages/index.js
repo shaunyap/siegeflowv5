@@ -1,10 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from './Home.module.scss'
 import fs from 'fs'
 const path = require('path')
 import matter from 'gray-matter'
+
+import styles from './Home.module.scss'
+import Footer from '../components/Footer'
 
 
 export async function getStaticProps() {
@@ -33,7 +35,7 @@ export async function getStaticProps() {
   }
 
   const projects = await getPostsForIndex('projects');
-  const blogPosts = await getPostsForIndex('posts');
+  const blogPosts = await getPostsForIndex('blog');
 
   return {
     props: {
@@ -84,36 +86,24 @@ export default function Home(props) {
         <section className={styles.half}>
           <div>
           <h2>Selected Past Work</h2>
-          <ul>
+          <ul className="post_index">
             {props.projects.map(post => (
-              <li key={post.path}>{post.title}</li>
+              <Link href={post.path} key={post.path}><a><li>{post.title}</li></a></Link>
             )) }
           </ul>
           </div>
           <div>
           <h2>Blog posts</h2>
-          <ul>
+          <ul className="post_index">
             {props.blogPosts.map(post => (
-              <li key={post.path}>{post.title}</li>
+              <Link href={post.path} key={post.path}><a><li>{post.title}</li></a></Link>
             )) }
           </ul>
           </div>
         </section>
 
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <Footer />
     </div>
   )
 }
