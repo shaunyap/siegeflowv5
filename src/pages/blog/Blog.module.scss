@@ -1,20 +1,9 @@
-.main {
-    padding-top: 2rem;
-    margin-top: 1.5rem;
-    display:flex;
-    justify-content: center;
+.title {
+    margin-bottom: 0.5rem;
 }
 
-.blog_post {
-    background-color: #fff;
-    border-top: 1rem solid var(--color-primary);
-    max-width: 960px;
-    padding: 2.5rem;
-
-    img {
-        max-width:calc(100% + 5rem);
-        margin-left: -2.5rem;
-        margin-right: -2.5rem;
-    }
-
+.date {
+    margin-top: 0;
+    font-size: 0.8em;
+    color: var(--color-dark-grey)
 }

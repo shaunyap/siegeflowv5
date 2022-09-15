@@ -11,11 +11,9 @@ tags: [usa, h1b1, visa]
 
 As I write this post, I am in the plane headed back to the United States to start my new job after getting a H-1B1 visa in Singapore. I could never have found my way through the process had it not for the people who had done this before and shared their experience in the following posts:
 
-[u/swyx](https://www.reddit.com/r/singapore/comments/7nflav/h1b1_visa_ama/)
-
-[christinang89](https://christinang89.quora.com/5-steps-to-file-for-H-1B1-Singapore-Visa-yourself)
-
-[hguochen](http://blog.hguochen.com/guide/2014/11/22/My-H1B1-experience/)
+- [u/swyx](https://www.reddit.com/r/singapore/comments/7nflav/h1b1_visa_ama/)
+- [christinang89](https://christinang89.quora.com/5-steps-to-file-for-H-1B1-Singapore-Visa-yourself)
+- [hguochen](http://blog.hguochen.com/guide/2014/11/22/My-H1B1-experience/)
 
 Having said that, since there have been some recent-ish changes since the last post, I hope that writing about my experience will help guide the way for other people the same way these have helped me. This is my **personal** experience with the H-1B1 (Singapore) visa, so caveat emptor.
 

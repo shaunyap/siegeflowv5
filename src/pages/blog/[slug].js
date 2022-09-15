@@ -1,47 +1,39 @@
-const path = require('path')
-import fs from 'fs'
+import Layout from "../../components/Layout"
+import { getPost } from '../../lib/posts'
 import MarkdownIt from 'markdown-it'
-import matter from 'gray-matter'
-
 import styles from './Blog.module.scss'
-import { getAllPostSlugs } from '../../lib/posts';
-
-const dirPath = path.resolve('./src/blog/')
 
 export async function getStaticPaths() {
-    const paths = getAllPostSlugs(dirPath);
-    return {
-      paths,
-      fallback: false,
-    };
+  return {
+    paths: [{ params: { slug: 'h1b1' } }, { params: { slug: '2' } }],
+    fallback: false, // can also be true or 'blocking'
   }
-
-export async function getStaticProps(context) {
-    const md = new MarkdownIt();
-
-    const fileContents = fs.readFileSync(path.resolve(`./src/blog/${context.params.slug}`,'./index.md'), 'utf8')
-    const { data, content } = matter(fileContents)
-
-    const frontMatter = data;
-    const renderedContent = md.render(content);
-    
-    // TODO: Figure out how/where to host images
-    return {
-      props: {frontMatter, renderedContent}
-    }
-  }
-
-const BlogPost = ({frontMatter, renderedContent}) => {
-return (
-    <main className={styles.main}>
-      <article className={styles.blog_post}>
-        <h1>{frontMatter.title}</h1>
-        <div
-          dangerouslySetInnerHTML={{__html: renderedContent}}
-        />
-      </article>
-    </main>
-)
 }
 
-export default BlogPost
+
+export async function getStaticProps() {
+    const md = new MarkdownIt();
+    const {data, content} = await getPost('blog', 'h1b1');
+    const renderedContent = md.render(content);
+
+    return {
+        props: {
+          data,
+          renderedContent
+        }
+    }
+}
+
+export default function Blog(props) {
+    return (
+        <Layout title="Blog">
+            <section>
+                <h1 className={styles.title}>{props.data.title}</h1>
+                <p className={styles.date}>Written {props.data.date}</p>
+            </section>
+            <section>
+            <div dangerouslySetInnerHTML={{ __html: props.renderedContent }} />
+            </section>
+        </Layout>
+    )
+}

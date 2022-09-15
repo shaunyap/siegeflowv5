@@ -1,0 +1,57 @@
+@use "../../styles/global/variables/media" as *;
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $max-width;
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+  
+    @media screen and (min-width: 1280px) {
+      min-width: 1280px;
+    } 
+  
+    @media screen and (max-width: $small) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  
+  main {
+      border-top: 0.75rem solid var(--color-primary);
+      padding-top: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+      max-width: 650px;
+      background-color: rgba(#eee, 0.8);
+      box-shadow:  10px 10px 20px 5px rgba(80, 80, 80, 0.3);
+
+      @media screen and (min-width: 1280px) {
+        min-width: 650px;
+      }
+  }
+  
+  section {
+      max-width: $article-width;
+      padding: 0 2rem;
+      margin: 2rem auto;
+  
+      @media screen and (max-width: $small) {
+        padding: 0 1.5rem;
+    }
+    }
+  }
+
+  .logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: -4.3rem;
+    margin-bottom: -5rem;
+
+    img {
+        border: 3px solid #eee !important;
+        display: inline;
+        border-radius: 50%;
+    }        
+}
