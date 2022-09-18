@@ -25,10 +25,9 @@ export async function getStaticProps(context) {
 
     const frontMatter = data;
     const renderedContent = md.render(content);
-    const teams = Object.getOwnPropertyNames(frontMatter.team);
-    const renderedTeams = teams.map(discipline => `<h6>${discipline}:</h6> ${md.render(frontMatter.team[discipline])}`)
+    const teams = frontMatter.team? Object.getOwnPropertyNames(frontMatter.team) : null
+    const renderedTeams = teams ? teams.map(discipline => `<h6>${discipline}:</h6> ${md.render(frontMatter.team[discipline])}`) : null
 
-    console.log(renderedTeams)
     // TODO: Figure out how/where to host images
     return {
       props: {frontMatter, renderedContent, renderedTeams}
@@ -44,10 +43,12 @@ const BlogPost = ({frontMatter, renderedContent, renderedTeams}) => {
             <h1>{frontMatter.title}</h1>
             <p>{frontMatter.subheader}</p>
           </div>
-          <div className={styles.team}>
-            <h3>Team</h3>
-            {renderedTeams.map((team, i) => <div key={i} dangerouslySetInnerHTML={{__html: team}} />)}
-          </div>
+          {renderedTeams ? (
+            <div className={styles.team}>
+              <h3>Team</h3>
+              {renderedTeams.map((team, i) => <div key={i} dangerouslySetInnerHTML={{__html: team}} />)}
+            </div>
+          ): null}
         </div>
         <div
           dangerouslySetInnerHTML={{__html: renderedContent}}

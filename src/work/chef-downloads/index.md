@@ -4,8 +4,8 @@ path: "/work/chef-downloads"
 date: "2020-07-30"
 title: "Chef Downloads"
 subheader: "Turning a back-end API into a beautiful webapp"
-category: "project"
 thumbnail: "./thumbnail.png"
+team: 
 tags: [Next.js, React.js, Marketo]
 
 ---

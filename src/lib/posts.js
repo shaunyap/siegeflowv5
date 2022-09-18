@@ -36,8 +36,9 @@ export function getPostsForIndex(directory, numberOfPosts) {
       posts.push(fileMeta(fileName))
     })
 
-    posts.sort((a,b) => a.date - b.date);
-    return posts.slice(0, numberOfPosts)
+    
+    const sortPosts= posts.sort((a,b) => new Date(b.date) - new Date(a.date));
+    return sortPosts.slice(0, numberOfPosts)
 }
 
 export function getPost(directory, fileName) {

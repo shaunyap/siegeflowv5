@@ -4,7 +4,7 @@ date: "2019-03-02"
 title: When should you use Class vs Function Components in React.js?
 category: blog
 thumbnail: "./thumbnail.jpg"
-tags: ["React.js", “Interview Prep"]
+tags: [React.js, Interview Prep]
 ---
 
 ##### Update: with state hooks, a lot of this is now no longer relevant as you can use track state using hooks in a function component. [React docs](https://reactjs.org/docs/hooks-state.html)

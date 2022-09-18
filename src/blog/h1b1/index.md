@@ -5,7 +5,7 @@ date: "2019-06-14"
 title: Getting a H1-B1 visa to work in the US
 category: "blog"
 thumbnail: "./thumbnail.jpg"
-tags: ["Immigration things", "others"]
+tags: [Immigration things]
 
 ---
 
