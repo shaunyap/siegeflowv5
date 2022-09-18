@@ -2,7 +2,7 @@ import fs from 'fs'
 import matter from 'gray-matter'
 const path = require('path')
 
-function getAllPostSlugs(postsDirectory) {
+export function getAllPostSlugs(postsDirectory) {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => {
     return {
@@ -17,12 +17,16 @@ export function getPostsForIndex(directory, numberOfPosts) {
     const fileMeta = (fileName) => {
       const fileContents = fs.readFileSync(path.resolve(`./src/${directory}/${fileName}`,'./index.md'), 'utf8')
       const { data } = matter(fileContents)
-      const {title, date} = data
+      const {title, date } = data
+      const subheader = data.subheader ? data.subheader : null 
+      const tags = data.tags ? data.tags : null 
 
       return {
         path: `/${directory}/${fileName}`,
         title,
-        date
+        date,
+        subheader, 
+        tags
       }
     }
 

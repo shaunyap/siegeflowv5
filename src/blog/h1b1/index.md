@@ -2,10 +2,10 @@
 
 path: "/blog/applying-for-h1b1"
 date: "2019-06-14"
-title: My process of getting a H1-B1 visa to work in the US
+title: Getting a H1-B1 visa to work in the US
 category: "blog"
 thumbnail: "./thumbnail.jpg"
-tags: [usa, h1b1, visa]
+tags: ["Immigration things", "others"]
 
 ---
 

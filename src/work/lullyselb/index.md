@@ -1,6 +1,6 @@
 ---
 
-path: "/projects/lullyselb"
+path: "/work/lullyselb"
 date: "2019-02-15"
 title: Automating customer lists on Mailchimp using Node.js
 category: "project"

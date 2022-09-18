@@ -6,12 +6,12 @@ import Layout from '../components/Layout'
 import { getPostsForIndex } from '../lib/posts'
 
 export async function getStaticProps() {
-  const projects = await getPostsForIndex('projects');
+  const work = await getPostsForIndex('work');
   const blogPosts = await getPostsForIndex('blog');
 
   return {
     props: {
-      projects,
+      work,
       blogPosts
     }
   }
@@ -48,15 +48,15 @@ export default function Home(props) {
           <section className={styles.half}>
             <div>
             <h2>Selected past work</h2>
-            <ul className="post_index">
-              {props.projects.map(post => (
+            <ul className={styles.post_index}>
+              {props.work.map(post => (
                 <Link href={post.path} key={post.path}><a><li>{post.title}</li></a></Link>
               )) }
             </ul>
             </div>
             <div>
             <h2>Blog posts</h2>
-            <ul className="post_index">
+            <ul className={styles.post_index}>
               {props.blogPosts.map(post => (
                 <Link href={post.path} key={post.path}><a><li>{post.title}</li></a></Link>
               )) }

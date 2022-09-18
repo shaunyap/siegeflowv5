@@ -1,17 +1,20 @@
 ---
 
-path: "/projects/amperity"
-date: "2021-07-01"
-title: "Amperity.com: A blazing fast web infrastructure built for scale"
+path: "/work/chef-downloads"
+date: "2020-07-30"
+title: "Chef Downloads"
+subheader: "Turning a back-end API into a beautiful webapp"
 category: "project"
 thumbnail: "./thumbnail.png"
-tags: [Next.js, Contentful, Jamstack, React.js]
+tags: [Next.js, React.js, Marketo]
 
 ---
-![Screenshot of Amperity.com Home Page](https://www.siegeflow.com/static/21e38cd9b57468e37c41e606d9e447b2/ac99c/header.jpg)
-[Live Site](https://amperity.com)
+![Screenshot of Chef Downloads Home Page](./header.jpg)
+[Live Site](https://downloads.chef.io)
 
-## The goal: switch front-end platforms from the PHP based craft, to something that's faster, more maintainable and scalable.
+Chef is an enterprise software startup. The goal was to bring their existing downloads site that fell out of maintainence onto a modern stack which we could control keep updated as a web team.
+
+## The goal: a consistent download experience with dynamic pages 
 
 Given the number of products (twelve), each with multiple permutations of versions, operating systems and build branches, it would be unrealistic to maintain the respective download pages manually, espcially since the teams push new versions fairly often. We thus chose `Next.js`, a React.js based framework that allowed for both static and server-side rendering to interface with Chef's API packages backend, and render it to the user in a snappy, responsive manner. 
 

@@ -7,7 +7,9 @@ thumbnail: "./thumbnail.jpg"
 tags: ["React.js", “Interview Prep"]
 ---
 
-> As I start to prepare to interview for a “_real_” developer job, I've quickly come to realize that I'm woefully unprepared for the technical coding questions. So this series is my attempt to formalize my thoughts, and hopefully come up with succinct answers to these ((allegedly)) commonly asked questions.
+##### Update: with state hooks, a lot of this is now no longer relevant as you can use track state using hooks in a function component. [React docs](https://reactjs.org/docs/hooks-state.html)
+
+> As I start to prepare to interview for a “_real_” developer job, I've quickly come to realize that I'm woefully unprepared for the technical coding questions. So this is my attempt to formalize my thoughts, and hopefully come up with succinct answers to these ((allegedly)) commonly asked questions.
 
 ### Using the right component for the job
 Components are the basic building blocks of React. A quick skim through the [documentation](https://reactjs.org/docs/getting-started.html) shows that there are two types, Function Components and Class Components. Their purpose is to return a single React element, and they do so in different ways. Sometimes, you should use Class Components, and while other times Function Components are better for the job. 

@@ -39,6 +39,17 @@ a {
   }
 }
 
+blockquote {
+  background-color: var(--color-callout-box);
+  margin: 0.5rem 0.5rem;
+  padding: 0.5rem 1rem;
+
+  p {
+    margin-bottom: 0;
+    font-style: italic;
+  }
+}
+
 pre {
   background-color: var(--color-off-black);
   padding: 1rem 1.5rem;
@@ -50,11 +61,6 @@ pre {
   }
 }
 
-.post_index {
-  padding-left: 0;
-  list-style-type: none;
-
-  li {
-    margin-bottom: 0.5rem;
-  }
+.center-text {
+  text-align: center;
 }

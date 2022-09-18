@@ -1,5 +1,5 @@
 ---
-path: "/projects/todoey"
+path: "/work/todoey"
 date: "2019-02-20"
 title: "Todoey: a Clear Clone on iOS"
 category: "project"
