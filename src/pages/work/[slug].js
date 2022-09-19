@@ -26,7 +26,13 @@ export async function getStaticProps(context) {
     const frontMatter = data;
     const renderedContent = md.render(content);
     const teams = frontMatter.team? Object.getOwnPropertyNames(frontMatter.team) : null
-    const renderedTeams = teams ? teams.map(discipline => `<h6>${discipline}:</h6> ${md.render(frontMatter.team[discipline])}`) : null
+    const rawHtml = teams ? teams.map(discipline => (
+      `<h6>${discipline}:</h6> ${typeof frontMatter.team[discipline] === "string" ? md.render(frontMatter.team[discipline])
+      : frontMatter.team[discipline].map(person => md.render(person))}`
+    )) : null
+
+    // do text handling - make everything one <p> and remove all newlines.
+    const renderedTeams = rawHtml.map(single => single.replace(/\n/g,'').replace(/,<p>/g, ', ').replace(/<\/p>(?=.{3,})/g, ''));
 
     // TODO: Figure out how/where to host images
     return {

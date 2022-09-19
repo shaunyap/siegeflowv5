@@ -7,7 +7,7 @@ subheader: "Building a scalable, performant platform for the future."
 thumbnail: "./thumbnail.png"
 tags: [Next.js, Contentful, Jamstack, React.js]
 team: {
-    webdev: "[Jiaji Li](https://jiajiali.me)",
+    webdev: ["[Jiaji Li](https://jiajiali.me)", "[Ample](https://www.ample.co)"],
     design: "[Amy Sun](https://www.amyfunsun.com)",
     creative: "[David Stychno](http://stychno.com/)"
 }

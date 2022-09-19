@@ -5,7 +5,7 @@ date: "2020-07-30"
 title: "Chef Downloads"
 subheader: "Turning a back-end API into a beautiful webapp"
 thumbnail: "./thumbnail.png"
-team: 
+team: {Design: "[Hania Lisowska](https://hannalisowska.com/chef-software-visual-language)"}
 tags: [Next.js, React.js, Marketo]
 
 ---
