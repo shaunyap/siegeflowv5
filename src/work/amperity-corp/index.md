@@ -16,27 +16,24 @@ team: {
 ![Screenshot of Amperity.com Home Page](https://www.siegeflow.com/static/21e38cd9b57468e37c41e606d9e447b2/ac99c/header.jpg)
 [Live Site](https://amperity.com)
 
-## The goal: switch front-end platforms from the PHP based craft, to something that's faster, more maintainable and scalable.
 
-Given the number of products (twelve), each with multiple permutations of versions, operating systems and build branches, it would be unrealistic to maintain the respective download pages manually, espcially since the teams push new versions fairly often. We thus chose `Next.js`, a React.js based framework that allowed for both static and server-side rendering to interface with Chef's API packages backend, and render it to the user in a snappy, responsive manner. 
+## Background
+Before there was a web team at Amperity, the team faced significant challenges with administering their website. Technical debt caused a several front-end features to not work, and pushing new content onto the site was not only hard. The situation was made even worse when the external contractor who built the site was no longer able to work on it. The website was a source of constant stress for several teams.
 
-## Site Architecture: Strategies and Constraints
-The underlying principle we took was to make it as easy for the 80% case, but to progressively iterate and build options for smaller and smaller edge cases, and quality of life improvements.
+The web team was started to find a solution to modernize the website and keep the rest of the team focused on what they do best instead of fixing a buggy and frustrating process.
 
-#### This 80% case we defiend as a given user would want to download the latest stable build of a current product for the operating system they were currently using. 
-This drove a lot of the design decisions like the split between the above-the-fold products and the rest, and several defaults like landing the user on the latest stable version for their operating system. Layering in requirements from several teams like marketing, the field team and legal, and we had a plan to get to the MVP.
+#### The goal
+## Building a modern, scalable stack that non-technical people could use to customize pages
 
-## Getting to the MVP
-The user journey was fairly simple: 
-1. Select a product on the home page
-2. Click download on the right product
-3. Fill a form
-4. Land on the thank you page
 
-Which meant that we only needed:
-- A statically rendered home page, beautifully designed to lead people to the product
-- Server-rendered product pages with a form that needed to pull package information from the API and to pass the relevant info to
-- A thank you page that serves the file and attempts to answer "Now what?"
+
+## The stack
+We ended up choosing the following pieces to form the foundation from which we could build and scale our web presence
+- Next.js
+- Contentful
+- Github
+- Storybook
+- Vercel
 
 ### The Home Page
 The truth is, the bulk of the work here was done by our creative team (shoutout to the wonderful and talented [Hania Lisowska](https://hannalisowska.com/chef-software-visual-language)). The implementation builds on the component library work we've done in the past and basic Bootstrap. The details are uninteresting.
