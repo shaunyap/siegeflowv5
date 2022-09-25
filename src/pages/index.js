@@ -35,7 +35,7 @@ export default function Home(props) {
               <div>
               <p>Hello there, thanks for dropping by! I&#8217;m Shaun. My day job is building and managing <a href="https://amperity.com">Amperity&#8217;s web properties</a> to drive business results for the organization.</p>
 
-              <p>Previously, I led the web strategy for <a href="https://chef.io">Chef Software</a> which was acquired by Progress Software for US$220m. I&#8217;ve also done some award-winning work at <a href="https://www.campaignlive.com/article/wpp-unveils-wavemaker-name-merged-mec-maxus-agency/1443769">the agency formerly known as MEC</a> in Singapore as well as in Dubai. I'm now based out of Seattle with my four cats.</p>
+              <p>Previously, I led the web strategy for <a href="https://chef.io">Chef Software</a> which was acquired by Progress Software for US$220m. I&#8217;ve also done some award-winning work at <a href="https://www.campaignlive.com/article/wpp-unveils-wavemaker-name-merged-mec-maxus-agency/1443769">the agency formerly known as MEC</a> in Singapore as well as in Dubai. I&apos;m now based out of Seattle with my four cats.</p>
 
               <p><a href="mailto:shaun@siegeflow.com">Feel free to say hi</a>.</p>
         
