@@ -13,57 +13,55 @@ team: {
 }
 
 ---
-![Screenshot of Amperity.com Home Page](https://www.siegeflow.com/static/21e38cd9b57468e37c41e606d9e447b2/ac99c/header.jpg)
+![Screenshot of Amperity.com Home Page](/amperity-homepage.jpg)
 [Live Site](https://amperity.com)
 
+##### The goal
+## A website befitting of Amperity's ambitions where non-technical team members could add & customize content
 
-## Background
-Before there was a web team at Amperity, the team faced significant challenges with administering their website. Technical debt caused a several front-end features to not work, and pushing new content onto the site was not only hard. The situation was made even worse when the external contractor who built the site was no longer able to work on it. The website was a source of constant stress for several teams.
+Amperity is a late stage startup that helps some of the world's best well-known brands use their customer data better in order to create superior customer experiences. As the company grew, so did the need for a modern web practice to scale with the team's activities.
 
-The web team was started to find a solution to modernize the website and keep the rest of the team focused on what they do best instead of fixing a buggy and frustrating process.
+##### Discovery
+## A team of teams: different fields,  same direction
+We interviewed members of different teams to find out how the web contributed to their goals, and how the then-current process was letting them down and several themes emerged. 
 
-#### The goal
-## Building a modern, scalable stack that non-technical people could use to customize pages
+The stack was hard to work with and unpredictable — if they had a page that needed to go live they didn't know if publishing would take 20 minutes or a full day. Furthermore, it was difficult to add new designs and templates as there was no defined process or a 'product owner' to help take that process forward.  
 
+It became clear to us that it was not just a technical problem, but a process and communications one as well.
 
+##### Strategy
+## A place for everything and everything in its place
 
-## The stack
-We ended up choosing the following pieces to form the foundation from which we could build and scale our web presence
-- Next.js
-- Contentful
-- Github
-- Storybook
-- Vercel
+The number one thing that needed to be done was to restore confidence in working with the website. To that end, we made decisions with the following principles in mind:
 
-### The Home Page
-The truth is, the bulk of the work here was done by our creative team (shoutout to the wonderful and talented [Hania Lisowska](https://hannalisowska.com/chef-software-visual-language)). The implementation builds on the component library work we've done in the past and basic Bootstrap. The details are uninteresting.
+#### Technical systems
+- Fast and stable performance: Allows for anyone's work to be well-represented, whether internally or to prospects and customers.
+- Hard to break: Having the system actively prevent anyone from doing anything that would take the site down increases exploration of features and peace of mind.
+- Easy to understand: Team members can have a conceptual framework of how to accomplish their tasks without surprises.
+- Scalable: The system should get better over time, and has headroom to grow.
 
-### The Product Pages
-Each product page is essentially the same, by using [dynamic routes](https://nextjs.org/docs/routing/dynamic-routes), we could call up the appropriate API, and combine that with some custom copy to serve up each of the product pages with information and the download links.
+#### Process management
+- Approachable and low-friction: The process helps, not hinders the task
+- Predictable: The dependencies and outputs can be easily planned for
 
-The plan was to gate each person's first download with a form asking for basic information and so we used `Formik` as a logic/presentation layer on top of `Marketo` for its features like form and submit handler customizations, as well as data validation. The data was submitted into Marketo which Chef uses as a CRM. We used `cookie-js` to set a cookie to 'remember' if a person had downloaded a package before.
+##### Execution
+## A headless approach backed by a documented workflow
 
-How it works is this: when a person clicks a download button, the handler looks to see if the cookie exists. If it does, then the user is routed to the thank you page alongside with some info on the file they are downlaoding. If the cookie does not exist, a modal with the form is called up, and filling the form also gives the same result. 
+We took a modular approach so that we could use the best available technology for each task, while also leaving the possibility of migrating to a different toolset should the need arise. Here's a high level overview of what we chose. 
 
-### The Thank You Pages
-The thank you page was fairly straightforward. The dynamic urls indicate the product, and a query param takes in the download endpoint. We validate this endpoint to make sure it comes from our package repository, serve up that file to the user, and based on the product, look up a json file of appropriate starter resources for a user to get started with.
+#### The technology stack
+- Storybook - building to and documenting our components allows us to showcase all the variations and easily test edge cases.
+- Next.js - hybrid static pages as well as server-rendered ones gives us the best mix of flexibility and performance.
+- Contentful - a headless CMS that's flexible and easy to use.
+- Github - version control allowing for multiple developers to simultaneously work on the codebase.
 
-With these three main parts done, we called it MVP and moved on to feature/quality of life improvements.
+### Building the process
+We took a three step approach to creating resources to aid the team in the process.
+1. Documentation - we created documentation that described what was needed for each workflow. Interactive demos were also made available on Storybook so that anyone could explore the different variations of our modules.
+2. Training - training was customized to the various teams so that we could show them a step-by-step on their common workflows. For example, the content team were showed how to create a blog post.
+3. Automation - we created a template in our project management system so that just choosing that option would generate a list of things to do and some resources for how to think about approaching various tasks.
 
-### Getting to 1.0
-The MVP announcement meant that the project was getting a lot more attention and excitement internally. We triaged the feedback and suggestions and identified the additions we wanted to make for our 1.0 version.
+##### Impact
+## Infrastructure and processes that helps us to move fast, without breaking things
 
-The big one was adding support for rendering markdown pages via API, as this enabled us to extend our site to also include (nicely rendered) release notes and licensing information.
-
-Some of the smaller, but non-trivial improvements we had made to improve the overall experience was a better sorting function (especially for Windows, their Server and Consumer OSes are a bit awkward to handle), and OS detection so the site is able to default the OS to the one being used. We also worked to optimize the API to imrpove runtime performance.
-
-### How we deploy
-When it comes to web-dev, deployment is often a topic of frustration, as setting up environments and making sure the right tests and processes are in place can sometimes be a chore. We were lucky to have our ops team on hand to put a nice Continuous Integration pipeline in place that made it awesome for us to deploy to testing, and promoting that into production.
-
-As I understand it, how it works is this: when new code is merged into the main git repo, a `buildkite` script gets fired off build the app using [Chef Habitat](community.chef.io/products/chef-habitat), which also packages it for a `Docker` container. It is then deployed onto a staging site where the team can review and QA. Once it's accepted, we promote it (on Slack, magically enough), and build kite then fires off a `Kubernetes` cluster of these containers. From our end, it's a Git Merge, testing, and a slack promotion.
-
-## Closing thoughts
-There were a whole bunch of people involved with the project, cutting across several disciplines, to whom a lot of credit is due. If this post makes it seems like webdev was the hero of the story, it is only because that's the part I'm most familiar with. Each of the indivudal pieces were critical to the success of the project, from the product and engineering teams, to creative and ops as well. 
-
-This working together gives me incredible confidence and excitement about what comes next in Chef.
-
+Since launching the site on the new platform, we've not only been more stable than we've ever been with no outages, but we've also enabled the team to push content faster they've never been able to before, all while being able to continuously add new features and improvements.

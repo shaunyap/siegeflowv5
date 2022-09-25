@@ -9,8 +9,7 @@ team: {Design: "[Hania Lisowska](https://hannalisowska.com/chef-software-visual-
 tags: [Next.js, React.js, Marketo]
 
 ---
-![Screenshot of Chef Downloads Home Page](./header.jpg)
-[Live Site](https://downloads.chef.io)
+![Screenshot of Chef Downloads Home Page](https://www.siegeflow.com/static/21e38cd9b57468e37c41e606d9e447b2/ac99c/header.jpg)
 
 Chef is an enterprise software startup. The goal was to bring their existing downloads site that fell out of maintainence onto a modern stack which we could control keep updated as a web team.
 

@@ -41,7 +41,7 @@ export default function Blog(props) {
                 <p className={styles.date}>{props.data.date}</p>
             </section>
             <section>
-            <div dangerouslySetInnerHTML={{ __html: props.renderedContent }} />
+            <div className={styles.blogpost} dangerouslySetInnerHTML={{ __html: props.renderedContent }} />
             </section>
         </Layout>
     )

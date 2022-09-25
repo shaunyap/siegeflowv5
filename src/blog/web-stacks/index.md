@@ -1,11 +1,11 @@
-—
+---
 path: /blog/web-stacks-and-why-they-matter
-date: “2022-09-20”
+date: "2022-09-20"
 title: Web stacks and why they matter 
-category: blog
+category: "blog"
 thumbnail: “./thumbnail.jpg”
-tags: [Business]
-—
+tags: [Web marketing, web stacks, infrastructure]
+---
 
 Websites are like the tip of the proverbial iceberg, that’s the part that is seen, but beneath the surface there is a lot going on. Having thought through and implementing several websites and processes for various companies, here is what I have learnt about building a web stack.
 
@@ -76,4 +76,7 @@ The most popular version control tool by far is Github, although GitLab is certa
 Performance monitoring tools are also a vital part of keeping an eye on how a website performs, after all, technical performance is closely tied to business goals too.
 
 ## Why it matters
-The decisions you make when it comes to your web stack can mean the difference between a website that is fun and joyful to work on, and one that a team dreads having to work with. Having a good stack allows for new features to be quickly developed and deployed on a stable infrastructure that minimizes downtime and therefore time spent dealing with unforeseen issues. Thus teams are able to focus on what they do best for your organization. 
+The decisions you make when it comes to your web stack can mean the difference between a website that is fun and a joy to work on, and one that is a dread to work with. Having a good stack allows for new features to be quickly developed and deployed on a stable infrastructure that minimizes downtime and therefore time spent dealing with unforeseen issues. Teams are able to focus on what they do best for your organization.
+
+The flipside is that if the system fights against the teams they're meant to serve, the team might just choose to go around it and "find their own solutions". Typically that means wasting a lot of time and resource on something that in the best case might look passable, but ultimately doesn't plug into the larger operating process, causing the business to miss out on insights and the ability to look back or follow up.
+

@@ -9,6 +9,8 @@ tags: [Immigration things]
 
 ---
 
+##### Update: It has been years since I wrote this post and a lot of it may no longer be up-to-date. While I do my best to help when people reach out, please do understand I am just a dude and not an immigration expert/lawyer and don't have the required expertise to know about many situations.
+
 As I write this post, I am in the plane headed back to the United States to start my new job after getting a H-1B1 visa in Singapore. I could never have found my way through the process had it not for the people who had done this before and shared their experience in the following posts:
 
 - [u/swyx](https://www.reddit.com/r/singapore/comments/7nflav/h1b1_visa_ama/)
@@ -30,7 +32,7 @@ There are a few key differences between the classic H-1B and H-1B1, but [Wikiped
 ### The process I went through
 Here is an overview of the process I went through. Your mileage may vary as I completed steps 1 through 8 online in the US with the help of immigration lawyers provided by my new employer.
 
-![Process of getting a H1-B1](visaProcess.png "Process of getting a H1-B1 flow")
+![Process of getting a H1-B1](/visaProcess.png "Process of getting a H1-B1 flow")
 
 ### Immigration Lawyers and LCA
 My employer hired immigration lawyers to help with the filing the LCA and putting together a packet. They requested some basic info from me (passport information, degree etc) and FedExed it to me when it was done after a week.
