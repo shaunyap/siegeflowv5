@@ -73,6 +73,7 @@ blockquote {
 pre {
   background-color: var(--color-off-black);
   padding: 1rem 1.5rem;
+  white-space:pre-wrap;
 
   code {
     color: var(--color-orange);

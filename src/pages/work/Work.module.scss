@@ -1,5 +1,11 @@
+@use "../../styles/global/variables/media" as *;
+
 .post_list {
     list-style-type: none;
+
+    @media screen and (max-width: $small) {
+        padding-left: 0;
+    }
 
     h4 {
         margin-bottom: 0;
