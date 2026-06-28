@@ -4,7 +4,7 @@ import styles from './Styles.module.scss';
 function Footer() {
     return (
         <footer className={styles.footer}>
-        Copyright 2022 Shaun Yap
+        Copyright 2026 Shaun Yap
         </footer>
   )
 }

@@ -24,7 +24,7 @@ export default function Home(props) {
           <section>
             <article className={styles.article}>
               <h1 className={styles.title}>
-                Seattle-based web developer and marketer
+                Seattle-based web marketing leader and developer
               </h1>
               <div className={styles.social_media}>
                 <div>
@@ -33,9 +33,11 @@ export default function Home(props) {
                 </div>
               </div>
               <div>
-              <p>Hello there, thanks for dropping by! I&apos;m Shaun. My day job is building and managing <a href="https://amperity.com">Amperity&apos;s web properties</a> to drive business results for the organization.</p>
+              <p>Hello there, thanks for dropping by! I&apos;m Shaun. For over 15 years, I&apos;ve led digital teams at the intersection of business strategy and technology, specializing in aligning modern web tools and data systems to make growth smooth and scalable.</p>
 
-              <p>Previously, I led the web strategy for <a href="https://chef.io">Chef Software</a> which was acquired by Progress Software for US$220m. I&apos;ve also done some award-winning work at <a href="https://www.campaignlive.com/article/wpp-unveils-wavemaker-name-merged-mec-maxus-agency/1443769">the agency formerly known as MEC</a> in Singapore as well as in Dubai. I&apos;m now based out of Seattle with my four cats.</p>
+              <p>Currently, I&apos;m the Head of Web Marketing at <a href="https://amperity.com">Amperity</a>. Lately, I&apos;ve been building custom AI agent workflows (using Gemini, Claude, and MCP) to automate reporting and launch campaigns in hours, optimizing performance with a headless Next.js/Vercel/Contentful stack, and developing pipeline attribution models unified across Salesforce, Marketo, and Google Analytics.</p>
+
+              <p>Previously, I led the web strategy for <a href="https://chef.io">Chef Software</a> (acquired by Progress Software for US$220m), founded my own advisory, Siegeflow, in Singapore, and ran award-winning campaigns at <a href="https://www.campaignlive.com/article/wpp-unveils-wavemaker-name-merged-mec-maxus-agency/1443769">Wavemaker (formerly MEC)</a> in Singapore and Dubai. Today, I live in the Seattle area with my four cats.</p>
 
               <p><a href="mailto:shaun@siegeflow.com">Feel free to say hi</a>.</p>
         

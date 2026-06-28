@@ -5,8 +5,18 @@
 }
 
 .title {
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2.25rem;
     text-align: center;
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.25;
+    color: var(--color-off-black);
+
+    @media screen and (max-width: $small) {
+        font-size: 1.75rem;
+    }
 }
 
 .social_media {
@@ -14,45 +24,53 @@
     justify-content: center;
 
     div {
-        min-width: 60px;
+        min-width: 90px;
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid var(--color-dark-grey);
+        justify-content: space-around;
+        margin-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 
-        a:hover {
-            filter: invert(12%) sepia(86%) saturate(3645%) hue-rotate(339deg) brightness(80%) contrast(88%);
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.2s ease;
+            border-bottom: none;
+
+            &:hover {
+                transform: translateY(-3px);
+                filter: invert(12%) sepia(86%) saturate(3645%) hue-rotate(339deg) brightness(80%) contrast(88%);
+            }
         }
     }
 }
 
 .signoff {
-    font-size: 1.9em;
+    font-size: 2.2em;
     font-family: "Ruthie", serif;
     text-align: right;
     transform: rotate(-10deg);
     padding-bottom: 0;
     margin: 3.5rem 3rem 0 0;
+    color: var(--color-primary);
+    opacity: 0.9;
 }
 
 .half {
-    margin-top: 0;
+    margin-top: 1.5rem;
     padding-bottom: 3rem;
+    
     @media screen and (min-width: $small) {
         display: flex;
+        gap: 3.5rem;
     }
 
     div {
-        @media screen and (min-width: $small) {
-            width: 50%;
+        flex: 1;
 
-            &:not(:first-of-type) {
-                margin-left: 3rem;
-            }
-        }
         @media screen and (max-width: $small) {
-            width: 100%;
+            margin-bottom: 2.5rem;
         }
     }
 }
@@ -60,8 +78,28 @@
 .post_index {
     padding-left: 0;
     list-style-type: none;
+    margin: 0;
   
-    li {
-      margin-bottom: 0.5rem;
+    a {
+        display: block;
+        color: var(--color-primary);
+        font-weight: 500;
+        padding: 0.5rem 0.75rem;
+        margin-left: -0.75rem;
+        border-radius: 6px;
+        border-bottom: none;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background-color: rgba(168, 30, 53, 0.04);
+            transform: translateX(6px);
+            text-decoration: none;
+        }
     }
-  }
+
+    li {
+        margin-bottom: 0.25rem;
+        font-size: 1.05rem;
+        list-style-type: none;
+    }
+}
