@@ -9,7 +9,7 @@ function Nav() {
           <li><Link href="/"><a>Home</a></Link></li>
           <li><Link href="/work"><a>Work</a></Link></li>
           <li><Link href="/blog"><a>Blog</a></Link></li>
-          <li><Link href="mailto:shaun@siegeflow.com"><a>Contact</a></Link></li>
+          <li><Link href="mailto:shaunyap@gmail.com"><a>Contact</a></Link></li>
         </ul>
         </nav>
   )

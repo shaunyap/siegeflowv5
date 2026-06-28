@@ -41,7 +41,7 @@ export default function Home(props) {
 
               <p>Previously, I led the web strategy for <a href="https://chef.io">Chef Software</a> (acquired by Progress Software for US$220m), founded my own advisory, Siegeflow, in Singapore, and ran award-winning campaigns at <a href="https://www.campaignlive.com/article/wpp-unveils-wavemaker-name-merged-mec-maxus-agency/1443769">Wavemaker (formerly MEC)</a> in Singapore and Dubai. Today, I live in the Seattle area with my wife and four cats.</p>
 
-              <p><a href="mailto:shaun@siegeflow.com">Feel free to say hi</a>.</p>
+              <p><a href="mailto:shaunyap@gmail.com">Feel free to say hi</a>.</p>
         
                 <p className={styles.signoff}>shaunyap</p>
               </div>
