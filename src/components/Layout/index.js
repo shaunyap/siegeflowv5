@@ -17,7 +17,10 @@ export default function Layout({ children, title }) {
       <div className={styles.wrapper}>
         <main>
             <div className={styles.logo}>
-                <Link href="/"><a><div className={styles.img_container} ><Image src="/logo_square.jpg" alt="Logo of a triangle with an enclosed circle" width="50" height="50"/></div></a></Link>
+                <Link href="/"><a><div className={styles.img_container} >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/logo_square.jpg" alt="Logo of a triangle with an enclosed circle" width="50" height="50"/>
+                </div></a></Link>
             </div>
             {children}
         </main>

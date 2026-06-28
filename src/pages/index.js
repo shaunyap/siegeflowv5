@@ -28,8 +28,10 @@ export default function Home(props) {
               </h1>
               <div className={styles.social_media}>
                 <div>
-                  <Link href="https://github.com/shaunyap"><a><Image src='/github.svg' alt="Github logo" width={20} height={20}/></a></Link>
-                  <Link href="https://linkedin.com/in/shauny"><a><Image src='/linkedin.svg' alt="LinkedIn logo" width={20} height={20}/></a></Link>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <Link href="https://github.com/shaunyap"><a><img src='/github.svg' alt="Github logo" width={20} height={20}/></a></Link>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <Link href="https://linkedin.com/in/shauny"><a><img src='/linkedin.svg' alt="LinkedIn logo" width={20} height={20}/></a></Link>
                 </div>
               </div>
               <div>
