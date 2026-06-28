@@ -7,11 +7,12 @@ subheader: "Automating targeted account-based marketing pages from Slack using m
 thumbnail: "./thumbnail.png"
 tags: [Next.js, Contentful, Vercel, Slack API, AI Agents, Gemini]
 team: {
-    webdev: ["[Shaun Yap](https://www.shaunyap.com)"],
-    creative: "Brand & Design Team"
+    webdev: ["[Shaun Yap](https://www.shaunyap.com)"]
 }
 
 ---
+
+![AI Sales Pages Under the Hood Diagram](/ai-sales-pages-architecture.png)
 
 ##### The Goal
 ## Hyper-personalized landing pages in minutes, not weeks
