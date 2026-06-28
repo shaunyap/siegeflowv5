@@ -39,7 +39,7 @@ export default function Home(props) {
 
               <p>Currently, I&apos;m the Head of Web Marketing at <a href="https://amperity.com">Amperity</a>. Lately, I&apos;ve been building custom AI agent workflows (using Gemini, Claude, and MCP) to automate reporting and launch campaigns in hours, optimizing performance with a headless Next.js/Vercel/Contentful stack, and developing pipeline attribution models unified across Salesforce, Marketo, and Google Analytics.</p>
 
-              <p>Previously, I led the web strategy for <a href="https://chef.io">Chef Software</a> (acquired by Progress Software for US$220m), founded my own advisory, Siegeflow, in Singapore, and ran award-winning campaigns at <a href="https://www.campaignlive.com/article/wpp-unveils-wavemaker-name-merged-mec-maxus-agency/1443769">Wavemaker (formerly MEC)</a> in Singapore and Dubai. Today, I live in the Seattle area with my four cats.</p>
+              <p>Previously, I led the web strategy for <a href="https://chef.io">Chef Software</a> (acquired by Progress Software for US$220m), founded my own advisory, Siegeflow, in Singapore, and ran award-winning campaigns at <a href="https://www.campaignlive.com/article/wpp-unveils-wavemaker-name-merged-mec-maxus-agency/1443769">Wavemaker (formerly MEC)</a> in Singapore and Dubai. Today, I live in the Seattle area with my wife and four cats.</p>
 
               <p><a href="mailto:shaun@siegeflow.com">Feel free to say hi</a>.</p>
         
