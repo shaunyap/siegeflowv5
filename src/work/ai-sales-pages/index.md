@@ -12,8 +12,6 @@ team: {
 
 ---
 
-![AI Sales Pages Under the Hood Diagram](/ai-sales-pages-architecture.png)
-
 ##### The Goal
 ## Hyper-personalized landing pages in minutes, not weeks
 
@@ -38,18 +36,7 @@ To make the generation process as frictionless as possible, we built the fronten
 
 Under the hood, a sophisticated multi-agent pipeline takes over:
 
-```mermaid
-graph TD
-    User["Sales Representative"] -->|1. Submit Research| Slack["Slackbot"]
-    Slack -->|2. Trigger Build| Vercel["Vercel Serverless Function"]
-    subgraph AI Pipeline (Vercel)
-        Vercel --> Agent1["Agent 1: Brand Copywriter"]
-        Agent1 -->|Brand-Aligned Copy| Agent2["Agent 2: Frontend Layout Architect"]
-    end
-    Agent2 -->|3. Populate Entries| Contentful["Contentful Management API"]
-    Contentful -->|4. Generate Staging & Preview Links| Slack
-    Slack -->|5. Deliver Links| User
-```
+![AI Sales Pages Under the Hood Diagram](/ai-sales-pages-architecture.png)
 
 #### 1. The Vercel Serverless Orchestrator
 The Slackbot sends the payload to a Vercel cloud server, which coordinates the AI agents and API integrations.
